@@ -10,7 +10,7 @@ interface GameScreenProps {
   onRestart: () => void
 }
 
-const MAX_ROUNDS = 10
+const MAX_ROUNDS = 12
 
 export function GameScreen({ onRestart }: GameScreenProps) {
   const { theme, setTheme } = useTheme()
@@ -119,7 +119,7 @@ export function GameScreen({ onRestart }: GameScreenProps) {
         </div>
         
         <div className="flex items-center gap-2">
-          {mounted && (
+          {/* {mounted && (
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="w-9 h-9 rounded-xl flex items-center justify-center bg-secondary hover:bg-secondary/80 transition-colors"
@@ -131,7 +131,7 @@ export function GameScreen({ onRestart }: GameScreenProps) {
                 <Moon className="w-4 h-4 text-secondary-foreground" />
               )}
             </button>
-          )}
+          )} */}
           <button
             onClick={onRestart}
             className="w-9 h-9 rounded-xl flex items-center justify-center bg-secondary hover:bg-secondary/80 transition-colors"

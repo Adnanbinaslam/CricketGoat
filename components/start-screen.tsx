@@ -9,7 +9,6 @@ interface StartScreenProps {
 }
 
 export function StartScreen({ onStart }: StartScreenProps) {
-  const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -27,22 +26,6 @@ export function StartScreen({ onStart }: StartScreenProps) {
           <h1 className="font-bold text-foreground text-sm sm:text-base tracking-wide">
             Cricket<span className="text-primary">GOAT</span>
           </h1>
-        </div>
-        
-        <div className="flex items-center gap-2">
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="w-9 h-9 rounded-xl flex items-center justify-center bg-secondary hover:bg-secondary/80 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? (
-                <Sun className="w-4 h-4 text-secondary-foreground" />
-              ) : (
-                <Moon className="w-4 h-4 text-secondary-foreground" />
-              )}
-            </button>
-          )}
         </div>
       </nav>
 
